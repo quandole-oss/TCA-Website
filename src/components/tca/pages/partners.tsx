@@ -97,12 +97,11 @@ export function PartnersPage() {
 			</Section>
 
 			<Section>
-				<div className="flex aspect-video items-center justify-center rounded-2xl border border-slate-light/50 bg-muted">
-					<div className="text-center text-slate-dark">
-						<div className="mb-2 text-4xl">&#127932;</div>
-						<p className="text-sm">Partner ecosystem visual placeholder</p>
-					</div>
-				</div>
+				<img
+					src="/partner-ecosystem.png"
+					alt="TCA Partner Ecosystem showing connections to Private Teachers, Studios, Youth Orchestras, Churches & Venues, and Instrument Shops"
+					className="w-full rounded-2xl border border-slate-light/50 object-cover"
+				/>
 			</Section>
 
 			<section className="bg-navy px-6 py-20">

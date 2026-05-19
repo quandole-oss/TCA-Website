@@ -73,12 +73,11 @@ export function AboutPage() {
 							</p>
 						</div>
 					</div>
-					<div className="flex aspect-square items-center justify-center rounded-2xl border border-slate-light/50 bg-muted">
-						<div className="text-center text-slate-dark">
-							<div className="mb-2 text-4xl">&#127911;</div>
-							<p className="text-sm">Mission visual placeholder</p>
-						</div>
-					</div>
+					<img
+						src="/mission.png"
+						alt="Student reading sheet music at a grand piano in a sunlit school music room"
+						className="aspect-square w-full rounded-2xl border border-slate-light/50 object-cover"
+					/>
 				</div>
 			</Section>
 

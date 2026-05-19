@@ -44,12 +44,11 @@ function Hero() {
 			</div>
 
 			<div className="relative mx-auto mt-16 max-w-4xl">
-				<div className="flex aspect-video items-center justify-center rounded-2xl border border-white/10 bg-white/5">
-					<div className="text-center text-slate">
-						<div className="mb-2 text-4xl">&#9835;</div>
-						<p className="text-sm">Hero image / video placeholder</p>
-					</div>
-				</div>
+				<img
+					src="/hero.png"
+					alt="Young musicians rehearsing together in a sunlit conservatory"
+					className="w-full rounded-2xl border border-white/10 object-cover"
+				/>
 			</div>
 		</section>
 	);
@@ -118,12 +117,11 @@ function WhyThisExists() {
 						academic rigor.
 					</p>
 				</div>
-				<div className="flex aspect-square items-center justify-center rounded-2xl border border-white/10 bg-white/5">
-					<div className="text-center text-slate">
-						<div className="mb-2 text-4xl">&#9834;</div>
-						<p className="text-sm">Visual placeholder</p>
-					</div>
-				</div>
+				<img
+					src="/the-problem.png"
+					alt="The problem: academics dominate the day while music is squeezed into the margins"
+					className="aspect-square w-full rounded-2xl border border-white/10 object-cover"
+				/>
 			</div>
 		</Section>
 	);
@@ -133,12 +131,11 @@ function AlphaEcosystem() {
 	return (
 		<Section>
 			<div className="grid items-center gap-12 lg:grid-cols-2">
-				<div className="order-2 flex aspect-video items-center justify-center rounded-2xl border border-slate-light/50 bg-muted lg:order-1">
-					<div className="text-center text-slate-dark">
-						<div className="mb-2 text-4xl">&#8644;</div>
-						<p className="text-sm">Alpha + Music concept visual placeholder</p>
-					</div>
-				</div>
+				<img
+					src="/alpha-ecosystem.png"
+					alt="Alpha ecosystem diagram showing Alpha Austin, Texas Sports Academy, and The Classical Academy"
+					className="order-2 w-full rounded-2xl border border-slate-light/50 object-cover lg:order-1"
+				/>
 				<div className="order-1 lg:order-2">
 					<SectionHeader
 						eyebrow="Alpha Ecosystem"
