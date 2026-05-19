@@ -8,11 +8,14 @@ function Hero() {
 	return (
 		<section className="relative flex min-h-[90vh] items-center overflow-hidden bg-navy">
 			<div className="absolute inset-0">
-				<img
-					src="/hero.png"
-					alt=""
-					className="h-full w-full object-cover opacity-40"
-					aria-hidden="true"
+				<video
+					src="/hero-video.mp4"
+					autoPlay
+					loop
+					muted
+					playsInline
+					tabIndex={-1}
+					className="pointer-events-none h-full w-full object-cover opacity-40"
 				/>
 				<div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/60 to-navy/30" />
 			</div>
