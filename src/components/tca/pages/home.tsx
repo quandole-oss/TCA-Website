@@ -127,8 +127,8 @@ function GiveYourKidTheEdge() {
 					</div>
 				</div>
 				<img
-					src="/hero.png"
-					alt="Young musicians rehearsing together"
+					src="/feature-student.png"
+					alt="Student with violin receiving feedback from a guide"
 					className="w-full rounded-2xl object-cover shadow-2xl"
 				/>
 			</div>
@@ -189,8 +189,8 @@ function SplitFeatures() {
 		<section className="grid md:grid-cols-2">
 			<div className="relative flex items-end bg-navy-light p-10 md:min-h-[500px] md:p-16">
 				<img
-					src="/the-problem.png"
-					alt="Academic mastery"
+					src="/learn-faster-bg.png"
+					alt="Student learning with tablet and violin"
 					className="absolute inset-0 h-full w-full object-cover opacity-30"
 					aria-hidden="true"
 				/>
@@ -222,8 +222,8 @@ function SplitFeatures() {
 			</div>
 			<div className="relative flex items-end bg-navy-light p-10 md:min-h-[500px] md:p-16">
 				<img
-					src="/alpha-ecosystem.png"
-					alt="Music training"
+					src="/train-pro-bg.png"
+					alt="Chamber ensemble rehearsing"
 					className="absolute inset-0 h-full w-full object-cover opacity-30"
 					aria-hidden="true"
 				/>
@@ -550,7 +550,7 @@ function FinalCTA() {
 		<section className="relative overflow-hidden bg-navy px-6 py-28">
 			<div className="absolute inset-0">
 				<img
-					src="/hero.png"
+					src="/cta-bg.png"
 					alt=""
 					className="h-full w-full object-cover opacity-20"
 					aria-hidden="true"
