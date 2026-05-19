@@ -36,17 +36,21 @@ export function IconPlaceholder({ label, size = "md", className = "" }: IconPlac
 		return <img src={src} alt={label} className={`object-contain ${SIZES[size]} ${className}`} />;
 	}
 
+	const initials = label
+		.split(" ")
+		.filter((w) => w.length > 0)
+		.map((w) => w[0])
+		.join("")
+		.slice(0, 2)
+		.toUpperCase();
+
 	return (
 		<div
 			className={`flex items-center justify-center rounded-xl bg-gradient-to-br from-cyan/20 to-navy/10 text-center font-semibold text-cyan-dark ${SIZES[size]} ${className}`}
-			aria-hidden="true"
+			role="img"
+			aria-label={label}
 		>
-			{label
-				.split(" ")
-				.map((w) => w[0])
-				.join("")
-				.slice(0, 2)
-				.toUpperCase()}
+			{initials || "?"}
 		</div>
 	);
 }
