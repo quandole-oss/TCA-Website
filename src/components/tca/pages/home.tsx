@@ -187,19 +187,18 @@ function ThreeCommitments() {
 function SplitFeatures() {
 	return (
 		<section className="grid md:grid-cols-2">
-			<div className="relative flex items-end bg-navy-light p-10 md:min-h-[500px] md:p-16">
-				<img
-					src="/learn-faster-bg.png"
-					alt="Student learning with tablet and violin"
-					className="absolute inset-0 h-full w-full object-cover opacity-30"
-					aria-hidden="true"
-				/>
-				<div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/70 to-transparent" />
-				<div className="relative">
+			<div className="flex flex-col bg-navy-light">
+				<div className="relative h-64 overflow-hidden md:h-80">
+					<img
+						src="/learn-faster-bg.png"
+						alt="Student learning with tablet and violin"
+						className="h-full w-full object-cover"
+					/>
+					<div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-navy-light to-transparent" />
+				</div>
+				<div className="p-10 md:p-12">
 					<h3 className="font-display text-3xl font-black uppercase text-white md:text-4xl">
-						Learn 2x
-						<br />
-						Faster
+						Learn 2x Faster
 					</h3>
 					<p className="mt-4 max-w-md text-sm leading-relaxed text-slate-light">
 						Powered by AI, personalized learning, and mastery-based progression, students complete
@@ -220,18 +219,18 @@ function SplitFeatures() {
 					</ul>
 				</div>
 			</div>
-			<div className="relative flex items-end bg-navy-light p-10 md:min-h-[500px] md:p-16">
-				<img
-					src="/train-pro-bg.png"
-					alt="Chamber ensemble rehearsing"
-					className="absolute inset-0 h-full w-full object-cover opacity-30"
-					aria-hidden="true"
-				/>
-				<div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/70 to-transparent" />
-				<div className="relative">
+			<div className="flex flex-col bg-navy-light">
+				<div className="relative h-64 overflow-hidden md:h-80">
+					<img
+						src="/train-pro-bg.png"
+						alt="Chamber ensemble rehearsing"
+						className="h-full w-full object-cover"
+					/>
+					<div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-navy-light to-transparent" />
+				</div>
+				<div className="p-10 md:p-12">
 					<h3 className="font-display text-3xl font-black uppercase text-white md:text-4xl">
-						Train Like
-						<br />a Pro
+						Train Like a Pro
 					</h3>
 					<p className="mt-4 max-w-md text-sm leading-relaxed text-slate-light">
 						With music starting at noon, students get all afternoon to train with expert guides. By
