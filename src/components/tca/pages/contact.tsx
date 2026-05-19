@@ -1,4 +1,5 @@
 import { type FormEvent, useState } from "react";
+import { Link } from "react-router-dom";
 
 import { CTAButton } from "@/components/tca/ui/cta-button";
 import { Section, SectionHeader } from "@/components/tca/ui/section";
@@ -95,15 +96,14 @@ export function ContactPage() {
 								Form submission is not yet connected to a backend. Please email us directly or check
 								back soon. In the meantime, explore our site to learn more about TCA.
 							</p>
-							<div className="mt-8 flex flex-wrap items-center justify-center gap-4">
+							<div className="mt-8 flex flex-wrap justify-center gap-4">
 								<CTAButton to="/the-model">Explore the Model</CTAButton>
-								<CTAButton
+								<Link
 									to="/faq"
-									variant="outline"
-									className="border-navy/30 text-navy hover:bg-navy/5"
+									className="inline-flex items-center gap-2 rounded-full border-2 border-navy/30 px-7 py-3.5 text-sm font-bold text-navy transition-all duration-300 hover:bg-navy/5"
 								>
 									Read the FAQ
-								</CTAButton>
+								</Link>
 							</div>
 						</div>
 					) : (
