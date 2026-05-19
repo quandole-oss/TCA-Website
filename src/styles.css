@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap");
+@import "tailwindcss";
+
+:root {
+	--background: #ffffff;
+	--foreground: #0a0a0a;
+	--muted: #f5f5f5;
+	--muted-foreground: #6b6b6b;
+	--card: #ffffff;
+	--border: #e5e5e5;
+	--input: #e5e5e5;
+	--ring: #0a0a0a;
+	--accent: #f5f5f5;
+	--accent-foreground: #0a0a0a;
+	--primary: #0a0a0a;
+	--primary-foreground: #fafafa;
+	--success: #16a34a;
+	--success-foreground: #f0fdf4;
+	--destructive: #dc2626;
+	--destructive-foreground: #fef2f2;
+	--tracking-label: 0.08em;
+
+	--navy: #0f1b2d;
+	--navy-light: #1a2d4a;
+	--navy-dark: #090f1a;
+	--cyan: #00c8ff;
+	--cyan-light: #7de4ff;
+	--cyan-dark: #0099cc;
+	--gold: #d4a853;
+	--gold-light: #e6c878;
+	--gold-dark: #b08930;
+	--slate: #94a3b8;
+	--slate-light: #cbd5e1;
+	--slate-dark: #64748b;
+}
+
+@theme inline {
+	--color-background: var(--background);
+	--color-foreground: var(--foreground);
+	--color-muted: var(--muted);
+	--color-muted-foreground: var(--muted-foreground);
+	--color-card: var(--card);
+	--color-border: var(--border);
+	--color-input: var(--input);
+	--color-ring: var(--ring);
+	--color-accent: var(--accent);
+	--color-accent-foreground: var(--accent-foreground);
+	--color-primary: var(--primary);
+	--color-primary-foreground: var(--primary-foreground);
+	--color-success: var(--success);
+	--color-success-foreground: var(--success-foreground);
+	--color-destructive: var(--destructive);
+	--color-destructive-foreground: var(--destructive-foreground);
+
+	--color-navy: var(--navy);
+	--color-navy-light: var(--navy-light);
+	--color-navy-dark: var(--navy-dark);
+	--color-cyan: var(--cyan);
+	--color-cyan-light: var(--cyan-light);
+	--color-cyan-dark: var(--cyan-dark);
+	--color-gold: var(--gold);
+	--color-gold-light: var(--gold-light);
+	--color-gold-dark: var(--gold-dark);
+	--color-slate: var(--slate);
+	--color-slate-light: var(--slate-light);
+	--color-slate-dark: var(--slate-dark);
+
+	--font-sans: "Inter", system-ui, sans-serif;
+	--font-serif: "Playfair Display", Georgia, serif;
+	--animate-soft-fade-in: soft-fade-in 200ms ease-out;
+	--animate-fade-up: fade-up 600ms ease-out;
+	--animate-fade-up-delay: fade-up 600ms ease-out 200ms both;
+}
+
+@keyframes soft-fade-in {
+	from {
+		opacity: 0;
+		transform: translateY(2px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+@keyframes fade-up {
+	from {
+		opacity: 0;
+		transform: translateY(24px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
+}
+
+html,
+body,
+#root {
+	min-height: 100%;
+}
+
+body {
+	margin: 0;
+	background: var(--background);
+	color: var(--foreground);
+	font-family: var(--font-sans);
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+html {
+	scroll-behavior: smooth;
+}
