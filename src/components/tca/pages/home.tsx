@@ -497,11 +497,14 @@ function EthicalReassurance() {
 					existing instruction can become more effective, better supported, and easier for families
 					to coordinate.
 				</p>
-				<div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+				<div className="mt-8 flex flex-wrap justify-center gap-4">
 					<CTAButton to="/partners">Partner With Us</CTAButton>
-					<CTAButton to="/guides" variant="outline">
+					<Link
+						to="/guides"
+						className="inline-flex items-center gap-2 rounded-full border-2 border-navy/30 px-7 py-3.5 text-sm font-bold text-navy transition-all duration-300 hover:bg-navy/5"
+					>
 						Join the Founding Guide Bench
-					</CTAButton>
+					</Link>
 				</div>
 			</div>
 		</Section>
