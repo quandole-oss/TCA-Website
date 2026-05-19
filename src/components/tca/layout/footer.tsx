@@ -18,8 +18,11 @@ const FOOTER_LINKS = {
 
 const OTHER_SCHOOLS = [
 	{ label: "Alpha School", href: "https://alpha.school" },
+	{ label: "Future of Education", href: "https://futureofeducation.school" },
+	{ label: "GT School", href: "https://gt.school" },
 	{ label: "Texas Sports Academy", href: "https://sportsacademy.school" },
 	{ label: "NextGen Academy", href: "https://nextgenacademy.school" },
+	{ label: "Nova Academy", href: "https://novaacademy.school" },
 ];
 
 export function Footer() {
