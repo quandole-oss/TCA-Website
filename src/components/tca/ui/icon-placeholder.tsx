@@ -5,9 +5,9 @@ interface IconPlaceholderProps {
 }
 
 const SIZES = {
-	sm: "h-10 w-10 text-xs",
-	md: "h-14 w-14 text-sm",
-	lg: "h-20 w-20 text-base",
+	sm: "h-14 w-14 text-xs",
+	md: "h-20 w-20 text-sm",
+	lg: "h-28 w-28 text-base",
 } as const;
 
 const ICON_MAP: Record<string, string> = {
@@ -33,13 +33,7 @@ export function IconPlaceholder({ label, size = "md", className = "" }: IconPlac
 	const src = ICON_MAP[label];
 
 	if (src) {
-		return (
-			<img
-				src={src}
-				alt={label}
-				className={`rounded-xl object-contain ${SIZES[size]} ${className}`}
-			/>
-		);
+		return <img src={src} alt={label} className={`object-contain ${SIZES[size]} ${className}`} />;
 	}
 
 	return (

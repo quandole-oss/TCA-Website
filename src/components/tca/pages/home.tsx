@@ -306,7 +306,7 @@ function ConservatoryAfternoon() {
 						key={comp.title}
 						className="rounded-2xl border border-slate-light/50 bg-white p-8 shadow-sm transition-all duration-300 hover:shadow-lg hover:border-cyan/30"
 					>
-						<IconPlaceholder label={comp.icon} size="sm" className="mb-3" />
+						<IconPlaceholder label={comp.icon} className="mb-4" />
 						<h3 className="mb-1.5 font-display text-lg font-bold uppercase text-navy">
 							{comp.title}
 						</h3>
