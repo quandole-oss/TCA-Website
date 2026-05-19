@@ -164,8 +164,10 @@ export function ModelPage() {
 				/>
 				<div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
 					{STUDENT_OUTCOMES.map((outcome) => (
-						<Card key={outcome.title} dark>
-							<IconPlaceholder label={outcome.icon} className="mb-4" />
+						<Card key={outcome.title} dark className="flex flex-col items-center text-center">
+							<div className="mb-5 shrink-0">
+								<IconPlaceholder label={outcome.icon} size="lg" />
+							</div>
 							<h3 className="mb-1.5 font-bold text-white">{outcome.title}</h3>
 							<p className="text-sm leading-relaxed text-slate">{outcome.description}</p>
 						</Card>

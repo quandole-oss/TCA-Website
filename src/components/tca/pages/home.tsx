@@ -173,9 +173,11 @@ function ThreeCommitments() {
 				{COMMITMENTS.map((card) => (
 					<div
 						key={card.title}
-						className="rounded-2xl border border-white/10 bg-white/5 p-8 transition-all duration-300 hover:border-cyan/30 hover:bg-white/10"
+						className="flex flex-col items-center rounded-2xl border border-white/10 bg-white/5 px-8 pb-8 pt-10 text-center transition-all duration-300 hover:border-cyan/30 hover:bg-white/10"
 					>
-						<IconPlaceholder label={card.icon} className="mb-5" />
+						<div className="mb-5 shrink-0">
+							<IconPlaceholder label={card.icon} size="lg" />
+						</div>
 						<h3 className="mb-3 font-display text-xl font-bold uppercase text-white">
 							{card.title}
 						</h3>
@@ -304,9 +306,11 @@ function ConservatoryAfternoon() {
 				{AFTERNOON_COMPONENTS.map((comp) => (
 					<div
 						key={comp.title}
-						className="rounded-2xl border border-slate-light/50 bg-white p-8 shadow-sm transition-all duration-300 hover:shadow-lg hover:border-cyan/30"
+						className="flex flex-col items-center rounded-2xl border border-slate-light/50 bg-white px-8 pb-8 pt-10 text-center shadow-sm transition-all duration-300 hover:shadow-lg hover:border-cyan/30"
 					>
-						<IconPlaceholder label={comp.icon} className="mb-4" />
+						<div className="mb-5 shrink-0">
+							<IconPlaceholder label={comp.icon} size="lg" />
+						</div>
 						<h3 className="mb-1.5 font-display text-lg font-bold uppercase text-navy">
 							{comp.title}
 						</h3>

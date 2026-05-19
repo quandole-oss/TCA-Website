@@ -86,8 +86,10 @@ export function MusicProgramPage() {
 				/>
 				<div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 					{PROGRAM_COMPONENTS.map((comp) => (
-						<Card key={comp.title}>
-							<IconPlaceholder label={comp.icon} className="mb-4" />
+						<Card key={comp.title} className="flex flex-col items-center text-center">
+							<div className="mb-5 shrink-0">
+								<IconPlaceholder label={comp.icon} size="lg" />
+							</div>
 							<h3 className="mb-2 font-display text-lg font-bold uppercase text-navy">
 								{comp.title}
 							</h3>
