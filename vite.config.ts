@@ -10,6 +10,9 @@ export default defineConfig({
 			"@": fileURLToPath(new URL("./src", import.meta.url)),
 		},
 	},
+	server: {
+		allowedHosts: true,
+	},
 	build: {
 		rollupOptions: {
 			input: fileURLToPath(new URL("./index.html", import.meta.url)),
