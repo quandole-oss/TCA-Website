@@ -95,9 +95,13 @@ export function ContactPage() {
 								Form submission is not yet connected to a backend. Please email us directly or check
 								back soon. In the meantime, explore our site to learn more about TCA.
 							</p>
-							<div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+							<div className="mt-8 flex flex-wrap items-center justify-center gap-4">
 								<CTAButton to="/the-model">Explore the Model</CTAButton>
-								<CTAButton to="/faq" variant="outline">
+								<CTAButton
+									to="/faq"
+									variant="outline"
+									className="border-navy/30 text-navy hover:bg-navy/5"
+								>
 									Read the FAQ
 								</CTAButton>
 							</div>
