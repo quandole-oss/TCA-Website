@@ -5,9 +5,9 @@ interface IconPlaceholderProps {
 }
 
 const SIZES = {
-	sm: "h-10 w-10",
-	md: "h-14 w-14",
-	lg: "h-20 w-20",
+	sm: "h-10 w-10 text-xs",
+	md: "h-14 w-14 text-sm",
+	lg: "h-20 w-20 text-base",
 } as const;
 
 const ICON_MAP: Record<string, string> = {
