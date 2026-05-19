@@ -20,9 +20,7 @@ export function Header() {
 		<header className="sticky top-0 z-50 border-b border-white/10 bg-navy/95 backdrop-blur-md">
 			<div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
 				<Link to="/" className="flex items-center gap-3" aria-label="Home">
-					<div className="flex h-9 w-9 items-center justify-center rounded-lg bg-cyan font-sans text-sm font-black text-navy">
-						TCA
-					</div>
+					<img src="/tca-logo.png" alt="TCA" className="h-9 w-9 rounded-lg object-contain" />
 					<div className="hidden sm:block">
 						<span className="text-lg font-bold tracking-tight text-white">
 							The Classical Academy
