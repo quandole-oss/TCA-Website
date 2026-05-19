@@ -23,9 +23,7 @@ export function Footer() {
 				<div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
 					<div>
 						<div className="mb-4 flex items-center gap-3">
-							<div className="flex h-9 w-9 items-center justify-center rounded-lg bg-cyan font-sans text-sm font-black text-navy">
-								TCA
-							</div>
+							<img src="/tca-logo.png" alt="TCA" className="h-9 w-9 rounded-lg object-contain" />
 							<span className="text-lg font-bold text-white">The Classical Academy</span>
 						</div>
 						<p className="mb-6 text-sm leading-relaxed text-slate">
