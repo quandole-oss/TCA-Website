@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap");
 @import "tailwindcss";
 
 :root {
@@ -67,9 +67,11 @@
 
 	--font-sans: "Inter", system-ui, sans-serif;
 	--font-serif: "Playfair Display", Georgia, serif;
+	--font-display: "Barlow Condensed", "Inter", system-ui, sans-serif;
 	--animate-soft-fade-in: soft-fade-in 200ms ease-out;
 	--animate-fade-up: fade-up 600ms ease-out;
 	--animate-fade-up-delay: fade-up 600ms ease-out 200ms both;
+	--animate-marquee: marquee 30s linear infinite;
 }
 
 @keyframes soft-fade-in {
@@ -91,6 +93,15 @@
 	to {
 		opacity: 1;
 		transform: translateY(0);
+	}
+}
+
+@keyframes marquee {
+	0% {
+		transform: translateX(0);
+	}
+	100% {
+		transform: translateX(-50%);
 	}
 }
 

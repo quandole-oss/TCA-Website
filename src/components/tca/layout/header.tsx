@@ -17,12 +17,12 @@ export function Header() {
 	const { pathname } = useLocation();
 
 	return (
-		<header className="sticky top-0 z-50 border-b border-white/10 bg-navy/95 backdrop-blur-md">
+		<header className="sticky top-0 z-50 bg-navy/95 backdrop-blur-md">
 			<div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
 				<Link to="/" className="flex items-center gap-3" aria-label="Home">
-					<img src="/tca-logo.png" alt="TCA" className="h-9 w-9 rounded-lg object-contain" />
+					<img src="/tca-logo.png" alt="TCA" className="h-9 w-9 object-contain" />
 					<div className="hidden sm:block">
-						<span className="text-lg font-bold tracking-tight text-white">
+						<span className="font-display text-lg font-bold uppercase tracking-wide text-white">
 							The Classical Academy
 						</span>
 					</div>
@@ -33,10 +33,8 @@ export function Header() {
 						<Link
 							key={item.href}
 							to={item.href}
-							className={`rounded-md px-3 py-2 text-sm font-medium transition-colors ${
-								pathname === item.href
-									? "bg-white/10 text-cyan"
-									: "text-slate-light hover:bg-white/5 hover:text-white"
+							className={`px-3 py-2 text-xs font-semibold uppercase tracking-[0.15em] transition-colors ${
+								pathname === item.href ? "text-cyan" : "text-slate-light hover:text-white"
 							}`}
 						>
 							{item.label}
@@ -44,7 +42,7 @@ export function Header() {
 					))}
 					<Link
 						to="/contact"
-						className="ml-3 rounded-lg bg-cyan px-4 py-2 text-sm font-semibold text-navy transition-colors hover:bg-cyan-light"
+						className="ml-4 rounded-full border-2 border-white px-5 py-2 text-xs font-bold uppercase tracking-[0.15em] text-white transition-all hover:bg-white hover:text-navy"
 					>
 						Contact
 					</Link>
@@ -91,10 +89,8 @@ export function Header() {
 								key={item.href}
 								to={item.href}
 								onClick={() => setMobileOpen(false)}
-								className={`rounded-md px-3 py-2.5 text-sm font-medium transition-colors ${
-									pathname === item.href
-										? "bg-white/10 text-cyan"
-										: "text-slate-light hover:bg-white/5 hover:text-white"
+								className={`px-3 py-2.5 text-xs font-semibold uppercase tracking-[0.15em] transition-colors ${
+									pathname === item.href ? "text-cyan" : "text-slate-light hover:text-white"
 								}`}
 							>
 								{item.label}
@@ -103,7 +99,7 @@ export function Header() {
 						<Link
 							to="/contact"
 							onClick={() => setMobileOpen(false)}
-							className="mt-3 rounded-lg bg-cyan px-4 py-2.5 text-center text-sm font-semibold text-navy transition-colors hover:bg-cyan-light"
+							className="mt-3 rounded-full border-2 border-white px-4 py-2.5 text-center text-xs font-bold uppercase tracking-[0.15em] text-white transition-all hover:bg-white hover:text-navy"
 						>
 							Contact
 						</Link>

@@ -44,10 +44,10 @@ export function GuidesPage() {
 		<>
 			<section className="bg-navy px-6 py-20 md:py-28">
 				<div className="mx-auto max-w-5xl text-center">
-					<p className="mb-4 text-sm font-semibold uppercase tracking-widest text-cyan">
+					<p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-cyan">
 						Founding Guides
 					</p>
-					<h1 className="font-serif text-4xl font-bold text-white md:text-5xl lg:text-6xl">
+					<h1 className="font-display text-4xl font-extrabold uppercase text-white md:text-5xl lg:text-6xl">
 						Keep performing. Build the next generation. Teach with purpose during the school day.
 					</h1>
 					<p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-slate-light">
@@ -68,7 +68,9 @@ export function GuidesPage() {
 				<div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
 					{GUIDE_ROLES.map((role) => (
 						<Card key={role.title}>
-							<h3 className="mb-3 text-lg font-bold text-navy">{role.title}</h3>
+							<h3 className="mb-3 font-display text-lg font-bold uppercase text-navy">
+								{role.title}
+							</h3>
 							<p className="text-sm leading-relaxed text-slate-dark">{role.description}</p>
 						</Card>
 					))}
@@ -106,7 +108,7 @@ export function GuidesPage() {
 
 			<section className="bg-navy px-6 py-20">
 				<div className="mx-auto max-w-3xl text-center">
-					<h2 className="font-serif text-3xl font-bold text-white md:text-4xl">
+					<h2 className="font-display text-3xl font-extrabold uppercase text-white md:text-4xl">
 						Interested in a founding guide role?
 					</h2>
 					<p className="mt-4 text-lg text-slate-light">

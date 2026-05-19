@@ -64,10 +64,10 @@ export function MusicProgramPage() {
 		<>
 			<section className="bg-navy px-6 py-20 md:py-28">
 				<div className="mx-auto max-w-5xl text-center">
-					<p className="mb-4 text-sm font-semibold uppercase tracking-widest text-cyan">
+					<p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-cyan">
 						Music Program
 					</p>
-					<h1 className="font-serif text-4xl font-bold text-white md:text-5xl lg:text-6xl">
+					<h1 className="font-display text-4xl font-extrabold uppercase text-white md:text-5xl lg:text-6xl">
 						Daily conservatory training for young musicians.
 					</h1>
 					<p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-slate-light">
@@ -88,7 +88,9 @@ export function MusicProgramPage() {
 					{PROGRAM_COMPONENTS.map((comp) => (
 						<Card key={comp.title}>
 							<IconPlaceholder label={comp.icon} className="mb-4" />
-							<h3 className="mb-2 text-lg font-bold text-navy">{comp.title}</h3>
+							<h3 className="mb-2 font-display text-lg font-bold uppercase text-navy">
+								{comp.title}
+							</h3>
 							<p className="mb-4 text-sm leading-relaxed text-slate-dark">{comp.description}</p>
 							<div className="rounded-lg bg-cyan/5 px-4 py-3">
 								<p className="text-xs font-semibold text-cyan-dark">
@@ -139,7 +141,7 @@ export function MusicProgramPage() {
 
 			<section className="bg-navy px-6 py-20">
 				<div className="mx-auto max-w-3xl text-center">
-					<h2 className="font-serif text-3xl font-bold text-white md:text-4xl">
+					<h2 className="font-display text-3xl font-extrabold uppercase text-white md:text-4xl">
 						Experience the conservatory afternoon.
 					</h2>
 					<p className="mt-4 text-lg text-slate-light">
