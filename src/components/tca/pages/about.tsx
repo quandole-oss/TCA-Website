@@ -37,8 +37,8 @@ export function AboutPage() {
 		<>
 			<section className="bg-navy px-6 py-20 md:py-28">
 				<div className="mx-auto max-w-5xl text-center">
-					<p className="mb-4 text-sm font-semibold uppercase tracking-widest text-cyan">About</p>
-					<h1 className="font-serif text-4xl font-bold text-white md:text-5xl lg:text-6xl">
+					<p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-cyan">About</p>
+					<h1 className="font-display text-4xl font-extrabold uppercase text-white md:text-5xl lg:text-6xl">
 						A school day built around musical growth.
 					</h1>
 					<p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-slate-light">
@@ -73,12 +73,11 @@ export function AboutPage() {
 							</p>
 						</div>
 					</div>
-					<div className="flex aspect-square items-center justify-center rounded-2xl border border-slate-light/50 bg-muted">
-						<div className="text-center text-slate-dark">
-							<div className="mb-2 text-4xl">&#127911;</div>
-							<p className="text-sm">Mission visual placeholder</p>
-						</div>
-					</div>
+					<img
+						src="/mission.png"
+						alt="Student reading sheet music at a grand piano in a sunlit school music room"
+						className="aspect-square w-full rounded-2xl border border-slate-light/50 object-cover"
+					/>
 				</div>
 			</Section>
 
@@ -105,7 +104,8 @@ export function AboutPage() {
 				<div className="mx-auto mt-10 max-w-xl text-center">
 					<div className="rounded-2xl border border-white/10 bg-white/5 p-8">
 						<p className="font-serif text-xl italic text-white">
-							"Texas Sports Academy is the sports lens. The Classical Academy is the music lens."
+							"Texas Sports Academy is the sports lens. The Classical Academy is the music lens.
+							Same playbook, different passion."
 						</p>
 					</div>
 				</div>
@@ -124,7 +124,9 @@ export function AboutPage() {
 							key={value.trait}
 							className="rounded-2xl border border-slate-light/50 bg-white p-8"
 						>
-							<h3 className="mb-2 text-lg font-bold text-navy">{value.trait}</h3>
+							<h3 className="mb-2 font-display text-lg font-bold uppercase text-navy">
+								{value.trait}
+							</h3>
 							<p className="mb-4 text-sm leading-relaxed text-slate-dark">{value.meaning}</p>
 							<p className="text-sm font-semibold italic text-cyan-dark">"{value.expression}"</p>
 						</div>
@@ -146,7 +148,7 @@ export function AboutPage() {
 
 			<section className="bg-navy px-6 py-20">
 				<div className="mx-auto max-w-3xl text-center">
-					<h2 className="font-serif text-3xl font-bold text-white md:text-4xl">
+					<h2 className="font-display text-3xl font-extrabold uppercase text-white md:text-4xl">
 						Be part of the founding story.
 					</h2>
 					<p className="mt-4 text-lg text-slate-light">

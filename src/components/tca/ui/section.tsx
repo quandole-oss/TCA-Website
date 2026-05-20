@@ -37,19 +37,19 @@ export function SectionHeader({
 		<div className={`mb-12 max-w-3xl ${centered ? "mx-auto text-center" : ""}`}>
 			{eyebrow && (
 				<p
-					className={`mb-3 text-sm font-semibold uppercase tracking-wider ${dark ? "text-cyan" : "text-cyan-dark"}`}
+					className={`mb-4 text-xs font-bold uppercase tracking-[0.2em] ${dark ? "text-cyan" : "text-cyan-dark"}`}
 				>
 					{eyebrow}
 				</p>
 			)}
 			<h2
-				className={`font-serif text-3xl font-bold leading-tight md:text-4xl lg:text-5xl ${dark ? "text-white" : "text-navy"}`}
+				className={`font-display text-3xl font-extrabold uppercase leading-tight tracking-tight md:text-4xl lg:text-5xl ${dark ? "text-white" : "text-navy"}`}
 			>
 				{title}
 			</h2>
 			{subtitle && (
 				<p
-					className={`mt-4 text-lg leading-relaxed ${dark ? "text-slate-light" : "text-slate-dark"}`}
+					className={`mt-5 text-lg leading-relaxed ${dark ? "text-slate-light" : "text-slate-dark"}`}
 				>
 					{subtitle}
 				</p>

@@ -50,16 +50,15 @@ export function AdmissionsPage() {
 		<>
 			<section className="bg-navy px-6 py-20 md:py-28">
 				<div className="mx-auto max-w-5xl text-center">
-					<p className="mb-4 text-sm font-semibold uppercase tracking-widest text-cyan">
-						Admissions
-					</p>
-					<h1 className="font-serif text-4xl font-bold text-white md:text-5xl lg:text-6xl">
+					<p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-cyan">Admissions</p>
+					<h1 className="font-display text-4xl font-extrabold uppercase text-white md:text-5xl lg:text-6xl">
 						Admissions for founding families.
 					</h1>
 					<p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-slate-light">
 						TCA is intentionally fit-first. We are looking for students who love music, respond to
 						coaching, can grow in independence, and would benefit from a school day organized around
-						both academic mastery and serious musical development.
+						both academic mastery and serious musical development on a conservatory and college prep
+						track.
 					</p>
 				</div>
 			</section>
@@ -80,7 +79,7 @@ export function AdmissionsPage() {
 								{step.step}
 							</div>
 							<div className="flex-1">
-								<h3 className="text-lg font-bold text-navy">{step.title}</h3>
+								<h3 className="font-display text-lg font-bold uppercase text-navy">{step.title}</h3>
 								<p className="mt-2 text-sm leading-relaxed text-slate-dark">{step.description}</p>
 							</div>
 							<div className="shrink-0 rounded-lg bg-cyan/5 px-4 py-2 sm:max-w-48">
@@ -122,7 +121,7 @@ export function AdmissionsPage() {
 						<ul className="space-y-3">
 							{[
 								"The student's musical interest is casual or exploratory",
-								"The family expects guaranteed competition outcomes or college placement",
+								"The family expects guaranteed competition wins or specific school admissions",
 								"The student is not ready for independent academic work",
 								"The family prefers a traditional full-day school schedule",
 								"The student is not open to group learning and peer feedback",
@@ -158,7 +157,7 @@ export function AdmissionsPage() {
 
 			<section className="bg-navy px-6 py-20">
 				<div className="mx-auto max-w-3xl text-center">
-					<h2 className="font-serif text-3xl font-bold text-white md:text-4xl">
+					<h2 className="font-display text-3xl font-extrabold uppercase text-white md:text-4xl">
 						Start your family's journey.
 					</h2>
 					<p className="mt-4 text-lg text-slate-light">

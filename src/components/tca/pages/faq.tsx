@@ -9,7 +9,7 @@ const FAQ_ITEMS = [
 		questions: [
 			{
 				q: "Is TCA part of Alpha School?",
-				a: "TCA is planned as an Alpha School specialty academy for young musicians. Like Texas Sports Academy uses the Alpha model through the lens of sports, TCA uses it through the lens of music. Final public wording will match approved Alpha brand guidance.",
+				a: "TCA is planned as an Alpha School specialty academy for young musicians. Like Texas Sports Academy uses the Alpha model through the lens of sports, TCA uses it through the lens of music.",
 			},
 			{
 				q: "How is this different from Alpha Austin?",
@@ -34,7 +34,7 @@ const FAQ_ITEMS = [
 			},
 			{
 				q: "What grades will launch first?",
-				a: "We recommend grades 4\u20138 or 5\u20138 for pilot clarity, with expansion based on demand and staffing.",
+				a: "TCA serves grades 7\u201312 \u2014 students on a conservatory and college prep track.",
 			},
 			{
 				q: "What instruments are supported?",
@@ -68,7 +68,7 @@ const FAQ_ITEMS = [
 			},
 			{
 				q: "Will TCA guarantee auditions, competitions, or scholarships?",
-				a: "No. TCA can provide process quality, coaching, accountability, and preparation, but outcomes depend on many factors. We are honest about what we can and cannot promise.",
+				a: "TCA is built to prepare students for conservatory auditions, college music programs, and competitions — but we cannot guarantee specific outcomes. We provide world-class process, coaching, and accountability. Results depend on many factors including the student's own commitment.",
 			},
 			{
 				q: "What does 'guided practice' mean?",
@@ -120,11 +120,15 @@ function FAQAccordion({ question, answer }: { question: string; answer: string }
 			<button
 				type="button"
 				onClick={() => setOpen(!open)}
-				className="flex w-full items-start justify-between gap-4 py-5 text-left"
+				className="flex w-full cursor-pointer items-center justify-between gap-4 py-5 text-left hover:bg-slate-light/10 -mx-4 px-4 rounded-lg transition-colors"
 				aria-expanded={open}
 			>
 				<span className="font-semibold text-navy">{question}</span>
-				<span className="mt-1 shrink-0 text-slate-dark">{open ? "\u2212" : "+"}</span>
+				<span
+					className={`shrink-0 text-lg font-bold text-slate-dark transition-transform ${open ? "rotate-45" : ""}`}
+				>
+					+
+				</span>
 			</button>
 			{open && (
 				<div className="pb-5">
@@ -140,8 +144,8 @@ export function FAQPage() {
 		<>
 			<section className="bg-navy px-6 py-20 md:py-28">
 				<div className="mx-auto max-w-5xl text-center">
-					<p className="mb-4 text-sm font-semibold uppercase tracking-widest text-cyan">FAQ</p>
-					<h1 className="font-serif text-4xl font-bold text-white md:text-5xl lg:text-6xl">
+					<p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-cyan">FAQ</p>
+					<h1 className="font-display text-4xl font-extrabold uppercase text-white md:text-5xl lg:text-6xl">
 						Founding families deserve clarity before commitment.
 					</h1>
 					<p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-slate-light">
@@ -155,7 +159,9 @@ export function FAQPage() {
 				<div className="mx-auto max-w-3xl">
 					{FAQ_ITEMS.map((category) => (
 						<div key={category.category} className="mb-12 last:mb-0">
-							<h2 className="mb-6 font-serif text-2xl font-bold text-navy">{category.category}</h2>
+							<h2 className="mb-6 font-display text-2xl font-bold uppercase text-navy">
+								{category.category}
+							</h2>
 							<div className="rounded-2xl border border-slate-light/50 bg-white px-6">
 								{category.questions.map((faq) => (
 									<FAQAccordion key={faq.q} question={faq.q} answer={faq.a} />
@@ -168,7 +174,7 @@ export function FAQPage() {
 
 			<section className="bg-navy px-6 py-20">
 				<div className="mx-auto max-w-3xl text-center">
-					<h2 className="font-serif text-3xl font-bold text-white md:text-4xl">
+					<h2 className="font-display text-3xl font-extrabold uppercase text-white md:text-4xl">
 						Still have questions?
 					</h2>
 					<p className="mt-4 text-lg text-slate-light">

@@ -1,160 +1,262 @@
 import { Link } from "react-router-dom";
 
-import { Card } from "@/components/tca/ui/card";
 import { CTAButton } from "@/components/tca/ui/cta-button";
 import { IconPlaceholder } from "@/components/tca/ui/icon-placeholder";
 import { Section, SectionHeader } from "@/components/tca/ui/section";
 
 function Hero() {
 	return (
-		<section className="relative overflow-hidden bg-navy px-6 py-24 md:py-36">
-			<div className="absolute inset-0 opacity-10">
-				<div className="absolute left-1/4 top-1/4 h-96 w-96 rounded-full bg-cyan blur-[120px]" />
-				<div className="absolute bottom-1/4 right-1/4 h-64 w-64 rounded-full bg-gold blur-[100px]" />
+		<section className="relative flex min-h-[90vh] items-center overflow-hidden bg-navy">
+			<div className="absolute inset-0">
+				<video
+					src="/hero-video.mp4"
+					autoPlay
+					loop
+					muted
+					playsInline
+					tabIndex={-1}
+					className="pointer-events-none h-full w-full object-cover opacity-40"
+				/>
+				<div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/60 to-navy/30" />
 			</div>
 
-			<div className="relative mx-auto max-w-5xl text-center">
-				<p className="mb-4 text-sm font-semibold uppercase tracking-widest text-cyan animate-fade-up">
+			<div className="relative mx-auto max-w-7xl px-6 py-32 md:py-40">
+				<p className="mb-6 text-xs font-bold uppercase tracking-[0.25em] text-cyan animate-fade-up">
 					An Alpha School Specialty Academy
 				</p>
-				<h1 className="font-serif text-4xl font-bold leading-tight text-white md:text-5xl lg:text-6xl animate-fade-up">
-					Accelerated Academics.
+				<h1 className="max-w-4xl font-display text-5xl font-black uppercase leading-[0.95] tracking-tight text-white md:text-7xl lg:text-8xl animate-fade-up">
+					This Is
 					<br />
-					<span className="text-cyan">Serious Music.</span>
-					<br />A School Day Built for Young Musicians.
+					The Classical
+					<br />
+					<span className="text-cyan">Academy</span>
 				</h1>
-				<p className="mx-auto mt-8 max-w-3xl text-lg leading-relaxed text-slate-light animate-fade-up-delay">
-					The Classical Academy is an Alpha School specialty academy for students whose musical life
-					has outgrown the margins of the day. Students complete focused academics in the morning,
-					then spend the afternoon in guided practice, musicianship, ensemble work, performance
-					preparation, and music-centered life skills.
+				<p className="mt-8 max-w-2xl text-lg leading-relaxed text-slate-light animate-fade-up-delay">
+					Accelerated academics in the morning. Conservatory-level music training all afternoon. A
+					new model for serious young musicians on a conservatory and college prep track.
 				</p>
 
-				<div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row animate-fade-up-delay">
+				<div className="mt-10 flex flex-wrap items-center gap-4 animate-fade-up-delay">
 					<CTAButton to="/events" size="lg">
-						Attend an Info Session
+						Apply Now
 					</CTAButton>
-					<CTAButton to="/events" variant="outline" size="lg">
-						Join a Saturday Conservatory Day
+					<CTAButton to="/the-model" variant="ghost" size="lg">
+						See the Program
 					</CTAButton>
-					<CTAButton to="/the-model" variant="secondary" size="lg">
-						Explore the Model
-					</CTAButton>
-				</div>
-			</div>
-
-			<div className="relative mx-auto mt-16 max-w-4xl">
-				<div className="flex aspect-video items-center justify-center rounded-2xl border border-white/10 bg-white/5">
-					<div className="text-center text-slate">
-						<div className="mb-2 text-4xl">&#9835;</div>
-						<p className="text-sm">Hero image / video placeholder</p>
-					</div>
 				</div>
 			</div>
 		</section>
 	);
 }
 
-const MODEL_CARDS = [
+const STATS = [
+	{ value: "2", label: "Hour Academics", desc: "Focused mastery-based learning each morning" },
+	{ value: "6", label: "Music Components", desc: "Daily conservatory training every afternoon" },
+	{ value: "Top", label: "National Scores", desc: "Alpha School academic performance results" },
+	{ value: "Pro", label: "Level Instruction", desc: "Expert guides and working musicians" },
+] as const;
+
+function StatsBar() {
+	return (
+		<section className="bg-navy-dark px-6 py-16">
+			<div className="mx-auto grid max-w-7xl gap-8 sm:grid-cols-2 lg:grid-cols-4">
+				{STATS.map((stat) => (
+					<div key={stat.label} className="text-center">
+						<p className="font-display text-5xl font-black uppercase text-gold md:text-6xl">
+							{stat.value}
+						</p>
+						<p className="mt-2 text-xs font-bold uppercase tracking-[0.2em] text-slate-light">
+							{stat.label}
+						</p>
+						<p className="mt-2 text-sm text-slate">{stat.desc}</p>
+					</div>
+				))}
+			</div>
+		</section>
+	);
+}
+
+const MARQUEE_QUOTES = [
+	'"When music gets the school day, everything changes."',
+	'"My daughter finally has time to practice properly."',
+	'"Academics accelerated, afternoons purposeful."',
+	'"A school that treats music as seriously as we do."',
+	'"The daily structure transformed his musicianship."',
+];
+
+function TestimonialMarquee() {
+	return (
+		<div className="overflow-hidden border-y border-white/10 bg-navy py-4">
+			<div className="flex animate-marquee whitespace-nowrap">
+				{[...MARQUEE_QUOTES, ...MARQUEE_QUOTES].map((quote, idx) => (
+					<span
+						// biome-ignore lint/suspicious/noArrayIndexKey: marquee items are duplicated for seamless loop
+						key={`${quote}-${idx}`}
+						className="mx-8 inline-flex items-center gap-3 text-sm italic text-slate-light"
+					>
+						<svg
+							className="h-4 w-4 shrink-0 text-gold"
+							viewBox="0 0 20 20"
+							fill="currentColor"
+							aria-hidden="true"
+						>
+							<path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+						</svg>
+						{quote}
+					</span>
+				))}
+			</div>
+		</div>
+	);
+}
+
+function GiveYourKidTheEdge() {
+	return (
+		<Section>
+			<div className="grid items-center gap-16 lg:grid-cols-2">
+				<div>
+					<SectionHeader eyebrow="The TCA Model" title="Give Your Kid the Edge" />
+					<p className="text-lg leading-relaxed text-slate-dark">
+						We are the music academy built for serious young musicians. With academics finished in
+						just two focused hours each morning, students have all afternoon for conservatory-level
+						music training and life skills development.
+					</p>
+					<p className="mt-4 text-lg leading-relaxed text-slate-dark">
+						Our students learn at two times the speed of traditional school while training with
+						expert musicians daily. This is the future of music education.
+					</p>
+					<div className="mt-8">
+						<CTAButton to="/the-model">School Overview</CTAButton>
+					</div>
+				</div>
+				<img
+					src="/feature-student.png"
+					alt="Student with violin receiving feedback from a guide"
+					className="w-full rounded-2xl object-cover shadow-2xl"
+				/>
+			</div>
+		</Section>
+	);
+}
+
+const COMMITMENTS = [
 	{
 		icon: "Accelerated Academics",
-		title: "Morning: Academic Mastery",
+		title: "Learn 2x Faster",
 		description:
-			"Focused, mastery-based academics through the Alpha model. Students complete core subjects efficiently, freeing the rest of the day for what drives them.",
+			"Using the same academic software as Alpha School, students learn at 2x the speed in just 2 hours each morning.",
 	},
 	{
 		icon: "Guided Practice",
-		title: "Afternoon: Conservatory Training",
+		title: "Train Like a Pro",
 		description:
-			"Guided practice with feedback, musicianship and theory, ensemble collaboration, and performance preparation — structured like a professional conservatory.",
+			"Guided practice with feedback, musicianship, ensemble collaboration, and performance preparation — structured like a professional conservatory.",
 	},
 	{
 		icon: "Life Skills",
-		title: "All Day: Music-Centered Life Skills",
+		title: "Love School",
 		description:
-			"Performance confidence, ensemble leadership, disciplined practice, feedback literacy, and the habits that make artistry sustainable.",
+			"Students aren't chained to a desk all day. After 2 focused hours of academics, they make music all afternoon.",
 	},
 ] as const;
 
-function ModelSnapshot() {
+function ThreeCommitments() {
 	return (
-		<Section>
+		<Section dark>
 			<SectionHeader
-				eyebrow="The TCA Model"
-				title="A school day designed around the way serious young musicians grow."
-				subtitle="The morning is for focused academic mastery. The afternoon is for structured musical development: practice with feedback, theory that connects to repertoire, ensemble collaboration, performance confidence, and the habits that make artistry sustainable."
+				eyebrow="Our 3 Commitments"
+				title="Academics. Music. Life Skills."
 				centered
+				dark
 			/>
 			<div className="grid gap-8 md:grid-cols-3">
-				{MODEL_CARDS.map((card) => (
-					<Card key={card.title}>
-						<IconPlaceholder label={card.icon} className="mb-4" />
-						<h3 className="mb-2 text-lg font-bold text-navy">{card.title}</h3>
-						<p className="text-sm leading-relaxed text-slate-dark">{card.description}</p>
-					</Card>
+				{COMMITMENTS.map((card) => (
+					<div
+						key={card.title}
+						className="flex flex-col items-center rounded-2xl border border-white/10 bg-white/5 px-8 pb-8 pt-10 text-center transition-all duration-300 hover:border-cyan/30 hover:bg-white/10"
+					>
+						<div className="mb-5 shrink-0">
+							<IconPlaceholder label={card.icon} size="lg" />
+						</div>
+						<h3 className="mb-3 font-display text-xl font-bold uppercase text-white">
+							{card.title}
+						</h3>
+						<p className="text-sm leading-relaxed text-slate">{card.description}</p>
+					</div>
 				))}
 			</div>
 		</Section>
 	);
 }
 
-function WhyThisExists() {
+function SplitFeatures() {
 	return (
-		<Section dark>
-			<div className="grid items-center gap-12 lg:grid-cols-2">
-				<div>
-					<SectionHeader
-						eyebrow="The Problem"
-						title="Music matters. But school takes the best hours."
-						dark
+		<section className="grid md:grid-cols-2">
+			<div className="flex flex-col bg-navy-light">
+				<div className="relative h-64 overflow-hidden md:h-80">
+					<img
+						src="/learn-faster-bg.png"
+						alt="Student learning with tablet and violin"
+						className="h-full w-full object-cover"
 					/>
-					<p className="text-lg leading-relaxed text-slate-light">
-						For serious young musicians, the conflict is real: conventional school consumes the best
-						hours of the day, practice becomes fragmented, and musical growth happens only in the
-						leftover margins of an already full schedule.
-					</p>
-					<p className="mt-4 text-lg leading-relaxed text-slate-light">
-						TCA solves this by giving music the school day it deserves — without sacrificing
-						academic rigor.
-					</p>
+					<div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-navy-light to-transparent" />
 				</div>
-				<div className="flex aspect-square items-center justify-center rounded-2xl border border-white/10 bg-white/5">
-					<div className="text-center text-slate">
-						<div className="mb-2 text-4xl">&#9834;</div>
-						<p className="text-sm">Visual placeholder</p>
-					</div>
+				<div className="p-10 md:p-12">
+					<h3 className="font-display text-3xl font-black uppercase text-white md:text-4xl">
+						Learn 2x Faster
+					</h3>
+					<p className="mt-4 max-w-md text-sm leading-relaxed text-slate-light">
+						Powered by AI, personalized learning, and mastery-based progression, students complete
+						core subjects in just two hours each morning. They only advance once they've truly
+						understood the material, then spend the rest of the day in music.
+					</p>
+					<ul className="mt-4 space-y-1.5">
+						{[
+							"AI-powered personalized learning",
+							"Mastery-based progression",
+							"Top academic growth",
+						].map((item) => (
+							<li key={item} className="flex items-center gap-2 text-sm text-cyan">
+								<span className="h-1.5 w-1.5 rounded-full bg-cyan" />
+								{item}
+							</li>
+						))}
+					</ul>
 				</div>
 			</div>
-		</Section>
-	);
-}
-
-function AlphaEcosystem() {
-	return (
-		<Section>
-			<div className="grid items-center gap-12 lg:grid-cols-2">
-				<div className="order-2 flex aspect-video items-center justify-center rounded-2xl border border-slate-light/50 bg-muted lg:order-1">
-					<div className="text-center text-slate-dark">
-						<div className="mb-2 text-4xl">&#8644;</div>
-						<p className="text-sm">Alpha + Music concept visual placeholder</p>
-					</div>
-				</div>
-				<div className="order-1 lg:order-2">
-					<SectionHeader
-						eyebrow="Alpha Ecosystem"
-						title="The Alpha model, through the lens of music."
+			<div className="flex flex-col bg-navy-light">
+				<div className="relative h-64 overflow-hidden md:h-80">
+					<img
+						src="/train-pro-bg.png"
+						alt="Chamber ensemble rehearsing"
+						className="h-full w-full object-cover"
 					/>
-					<p className="text-lg leading-relaxed text-slate-dark">
-						Like Texas Sports Academy applies the Alpha academic structure through athletics, The
-						Classical Academy applies it through musicianship: academics are accelerated, afternoons
-						are purposeful, and students learn through a passion that already matters to them.
+					<div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-navy-light to-transparent" />
+				</div>
+				<div className="p-10 md:p-12">
+					<h3 className="font-display text-3xl font-black uppercase text-white md:text-4xl">
+						Train Like a Pro
+					</h3>
+					<p className="mt-4 max-w-md text-sm leading-relaxed text-slate-light">
+						With music starting at noon, students get all afternoon to train with expert guides. By
+						4pm, they've already completed 6-7 quality hours of academics, music training, and life
+						skills.
 					</p>
-					<div className="mt-6">
-						<CTAButton to="/the-model">Learn More About the Model</CTAButton>
-					</div>
+					<ul className="mt-4 space-y-1.5">
+						{[
+							"4 full hours for music and life skills",
+							"Expert coaching, grades 7 through 12",
+							"Built to develop the next generation of musicians",
+						].map((item) => (
+							<li key={item} className="flex items-center gap-2 text-sm text-cyan">
+								<span className="h-1.5 w-1.5 rounded-full bg-cyan" />
+								{item}
+							</li>
+						))}
+					</ul>
 				</div>
 			</div>
-		</Section>
+		</section>
 	);
 }
 
@@ -193,25 +295,106 @@ const AFTERNOON_COMPONENTS = [
 
 function ConservatoryAfternoon() {
 	return (
-		<Section dark>
+		<Section>
 			<SectionHeader
 				eyebrow="The Conservatory Afternoon"
 				title="Weekly lessons inspire. Daily structure transforms."
 				subtitle="TCA surrounds the young musician with the routines, feedback, peer culture, and performance opportunities that make musical growth visible."
 				centered
-				dark
 			/>
 			<div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
 				{AFTERNOON_COMPONENTS.map((comp) => (
-					<Card key={comp.title} dark>
-						<IconPlaceholder label={comp.icon} size="sm" className="mb-3" />
-						<h3 className="mb-1.5 font-bold text-white">{comp.title}</h3>
-						<p className="text-sm leading-relaxed text-slate">{comp.description}</p>
-					</Card>
+					<div
+						key={comp.title}
+						className="flex flex-col items-center rounded-2xl border border-slate-light/50 bg-white px-8 pb-8 pt-10 text-center shadow-sm transition-all duration-300 hover:shadow-lg hover:border-cyan/30"
+					>
+						<div className="mb-5 shrink-0">
+							<IconPlaceholder label={comp.icon} size="lg" />
+						</div>
+						<h3 className="mb-1.5 font-display text-lg font-bold uppercase text-navy">
+							{comp.title}
+						</h3>
+						<p className="text-sm leading-relaxed text-slate-dark">{comp.description}</p>
+					</div>
 				))}
 			</div>
 			<div className="mt-10 text-center">
 				<CTAButton to="/music-program">Explore the Full Music Program</CTAButton>
+			</div>
+		</Section>
+	);
+}
+
+function ScheduleComparison() {
+	return (
+		<Section dark>
+			<SectionHeader
+				eyebrow="The Daily Schedule"
+				title="2 Hours to Learn, All Afternoon to Play"
+				centered
+				dark
+			/>
+			<div className="mx-auto max-w-4xl">
+				<div className="grid gap-8 md:grid-cols-2">
+					<div className="rounded-2xl border border-white/10 bg-white/5 p-8">
+						<h3 className="mb-4 font-display text-xl font-bold uppercase text-gold">
+							Standard School
+						</h3>
+						<div className="space-y-2">
+							{["9am", "10am", "11am", "12pm", "1pm", "2pm", "3pm"].map((time) => (
+								<div key={time} className="flex items-center gap-3">
+									<span className="w-12 text-xs text-slate">{time}</span>
+									<div className="h-8 flex-1 rounded bg-slate-dark/30 flex items-center px-3">
+										<span className="text-xs text-slate-light">Sitting in class</span>
+									</div>
+								</div>
+							))}
+						</div>
+					</div>
+					<div className="rounded-2xl border border-cyan/30 bg-white/5 p-8">
+						<h3 className="mb-4 font-display text-xl font-bold uppercase text-cyan">
+							The Classical Academy
+						</h3>
+						<div className="space-y-2">
+							{[
+								{ time: "9am", label: "2 Hour Learning", color: "bg-cyan/30", text: "text-cyan" },
+								{ time: "10am", label: "2 Hour Learning", color: "bg-cyan/30", text: "text-cyan" },
+								{
+									time: "11am",
+									label: "Break & Transition",
+									color: "bg-gold/20",
+									text: "text-gold",
+								},
+								{
+									time: "12pm",
+									label: "Music Training",
+									color: "bg-gold/30",
+									text: "text-gold-light",
+								},
+								{
+									time: "1pm",
+									label: "Music Training",
+									color: "bg-gold/30",
+									text: "text-gold-light",
+								},
+								{
+									time: "2pm",
+									label: "Music Training",
+									color: "bg-gold/30",
+									text: "text-gold-light",
+								},
+								{ time: "3pm", label: "Life Skills", color: "bg-cyan/20", text: "text-cyan-light" },
+							].map((slot) => (
+								<div key={slot.time} className="flex items-center gap-3">
+									<span className="w-12 text-xs text-slate">{slot.time}</span>
+									<div className={`h-8 flex-1 rounded ${slot.color} flex items-center px-3`}>
+										<span className={`text-xs font-medium ${slot.text}`}>{slot.label}</span>
+									</div>
+								</div>
+							))}
+						</div>
+					</div>
+				</div>
 			</div>
 		</Section>
 	);
@@ -222,7 +405,7 @@ function WhoThrivesHere() {
 		<Section>
 			<SectionHeader
 				eyebrow="Fit"
-				title="Who thrives at TCA?"
+				title="Who Thrives at TCA?"
 				subtitle="TCA is for motivated, coachable students who would benefit from a school day organized around both academic mastery and serious musical development."
 				centered
 			/>
@@ -255,7 +438,7 @@ function EventsPreview() {
 		<Section dark>
 			<SectionHeader
 				eyebrow="Upcoming Events"
-				title="Experience TCA before you apply."
+				title="Experience TCA Before You Apply"
 				subtitle="Attend an info session, join a Saturday Conservatory Day, or schedule a musicianship diagnostic."
 				centered
 				dark
@@ -278,16 +461,21 @@ function EventsPreview() {
 						cta: "Book a Spot",
 					},
 				].map((event) => (
-					<Card key={event.title} dark>
-						<h3 className="mb-2 text-lg font-bold text-white">{event.title}</h3>
+					<div
+						key={event.title}
+						className="rounded-2xl border border-white/10 bg-white/5 p-8 transition-all duration-300 hover:border-cyan/30 hover:bg-white/10"
+					>
+						<h3 className="mb-2 font-display text-lg font-bold uppercase text-white">
+							{event.title}
+						</h3>
 						<p className="mb-6 text-sm leading-relaxed text-slate">{event.desc}</p>
 						<Link
 							to="/events"
-							className="text-sm font-semibold text-cyan transition-colors hover:text-cyan-light"
+							className="text-sm font-bold uppercase tracking-wider text-cyan transition-colors hover:text-cyan-light"
 						>
 							{event.cta} &rarr;
 						</Link>
-					</Card>
+					</div>
 				))}
 			</div>
 		</Section>
@@ -300,7 +488,7 @@ function EthicalReassurance() {
 			<div className="mx-auto max-w-3xl text-center">
 				<SectionHeader
 					eyebrow="Our Commitment"
-					title="Built to strengthen Austin's music ecosystem."
+					title="Built to Strengthen Austin's Music Ecosystem"
 					centered
 				/>
 				<p className="text-lg leading-relaxed text-slate-dark">
@@ -309,11 +497,14 @@ function EthicalReassurance() {
 					existing instruction can become more effective, better supported, and easier for families
 					to coordinate.
 				</p>
-				<div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+				<div className="mt-8 flex flex-wrap justify-center gap-4">
 					<CTAButton to="/partners">Partner With Us</CTAButton>
-					<CTAButton to="/guides" variant="outline">
+					<Link
+						to="/guides"
+						className="inline-flex items-center gap-2 rounded-full border-2 border-navy/30 px-7 py-3.5 text-sm font-bold text-navy transition-all duration-300 hover:bg-navy/5"
+					>
 						Join the Founding Guide Bench
-					</CTAButton>
+					</Link>
 				</div>
 			</div>
 		</Section>
@@ -323,7 +514,7 @@ function EthicalReassurance() {
 const FAQ_PREVIEW = [
 	{
 		q: "Is TCA part of Alpha School?",
-		a: "TCA is planned as an Alpha School specialty academy for young musicians. Final public wording should match approved Alpha brand guidance.",
+		a: "TCA is planned as an Alpha School specialty academy for young musicians. Like Texas Sports Academy uses the Alpha model through the lens of sports, TCA uses it through the lens of music.",
 	},
 	{
 		q: "Is this only for advanced students?",
@@ -335,7 +526,7 @@ const FAQ_PREVIEW = [
 	},
 	{
 		q: "What grades will launch first?",
-		a: "We recommend grades 4\u20138 or 5\u20138 for pilot clarity, with expansion based on demand and staffing.",
+		a: "TCA serves grades 7\u201312 \u2014 students on a conservatory and college prep track.",
 	},
 ] as const;
 
@@ -344,7 +535,7 @@ function FAQPreview() {
 		<Section dark>
 			<SectionHeader
 				eyebrow="Frequently Asked Questions"
-				title="Founding families deserve clarity before commitment."
+				title="Founding Families Deserve Clarity"
 				centered
 				dark
 			/>
@@ -365,26 +556,32 @@ function FAQPreview() {
 
 function FinalCTA() {
 	return (
-		<section className="relative overflow-hidden bg-navy px-6 py-24">
-			<div className="absolute inset-0 opacity-10">
-				<div className="absolute left-1/2 top-1/2 h-96 w-96 -translate-x-1/2 -translate-y-1/2 rounded-full bg-cyan blur-[150px]" />
+		<section className="relative overflow-hidden bg-navy px-6 py-28">
+			<div className="absolute inset-0">
+				<img
+					src="/cta-bg.png"
+					alt=""
+					className="h-full w-full object-cover opacity-20"
+					aria-hidden="true"
+				/>
+				<div className="absolute inset-0 bg-gradient-to-t from-navy via-navy/80 to-navy/60" />
 			</div>
 			<div className="relative mx-auto max-w-3xl text-center">
-				<h2 className="font-serif text-3xl font-bold text-white md:text-4xl lg:text-5xl">
-					Ready to explore TCA?
+				<h2 className="font-display text-4xl font-black uppercase text-white md:text-5xl lg:text-6xl">
+					Double Your Child's
+					<br />
+					<span className="text-cyan">Musical Potential</span>
 				</h2>
-				<p className="mx-auto mt-4 max-w-xl text-lg text-slate-light">
-					Take the next step that feels right for your family.
+				<p className="mx-auto mt-6 max-w-xl text-lg text-slate-light">
+					Give your kid the best shot at musical, academic, and personal success. Take the next step
+					that feels right for your family.
 				</p>
 				<div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
 					<CTAButton to="/events" size="lg">
 						Attend an Info Session
 					</CTAButton>
-					<CTAButton to="/admissions" variant="secondary" size="lg">
+					<CTAButton to="/admissions" variant="outline" size="lg">
 						Book a Family Fit Call
-					</CTAButton>
-					<CTAButton to="/guides" variant="outline" size="lg">
-						Join the Guide Bench
 					</CTAButton>
 				</div>
 			</div>
@@ -396,10 +593,13 @@ export function HomePage() {
 	return (
 		<>
 			<Hero />
-			<ModelSnapshot />
-			<WhyThisExists />
-			<AlphaEcosystem />
+			<StatsBar />
+			<TestimonialMarquee />
+			<GiveYourKidTheEdge />
+			<ThreeCommitments />
+			<SplitFeatures />
 			<ConservatoryAfternoon />
+			<ScheduleComparison />
 			<WhoThrivesHere />
 			<EventsPreview />
 			<EthicalReassurance />

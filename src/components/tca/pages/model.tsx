@@ -21,25 +21,25 @@ const SCHEDULE = [
 		description: "Movement, snack, and mental shift from academics to music.",
 	},
 	{
-		time: "11:30 AM \u2013 12:30 PM",
+		time: "11:30 AM \u2013 12:15 PM",
 		block: "Guided Practice",
 		description: "Individual practice with guide feedback, clear goals, and accountability.",
 	},
 	{
-		time: "12:30 \u2013 1:00 PM",
+		time: "12:15 \u2013 12:45 PM",
 		block: "Lunch",
 		description: "Community meal and informal peer connection.",
 	},
 	{
-		time: "1:00 \u2013 2:00 PM",
+		time: "12:45 \u2013 1:30 PM",
 		block: "Musicianship & Theory",
 		description: "Ear training, notation, rhythm, harmony, sight-reading, analysis, and listening.",
 	},
 	{
-		time: "2:00 \u2013 3:00 PM",
+		time: "1:30 \u2013 3:00 PM",
 		block: "Ensemble & Performance",
 		description:
-			"Chamber music, choir, rhythm labs, studio classes, mock auditions, and performance preparation.",
+			"The centerpiece of the afternoon. Chamber music, sectionals, choir, studio classes, mock auditions, and performance preparation.",
 	},
 	{
 		time: "3:00 \u2013 3:30 PM",
@@ -111,16 +111,17 @@ export function ModelPage() {
 		<>
 			<section className="bg-navy px-6 py-20 md:py-28">
 				<div className="mx-auto max-w-5xl text-center">
-					<p className="mb-4 text-sm font-semibold uppercase tracking-widest text-cyan">
+					<p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-cyan">
 						The TCA Model
 					</p>
-					<h1 className="font-serif text-4xl font-bold text-white md:text-5xl lg:text-6xl">
+					<h1 className="font-display text-4xl font-extrabold uppercase text-white md:text-5xl lg:text-6xl">
 						Alpha academics through the lens of music.
 					</h1>
 					<p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-slate-light">
-						The Classical Academy is built on a simple premise: when children complete academics
+						The Classical Academy is built on a simple premise: when students complete academics
 						efficiently and spend the rest of the day pursuing a serious passion, school becomes
-						more purposeful. For TCA students, that passion is music.
+						more purposeful. For TCA students, that passion is classical music — with ensemble and
+						collaborative playing at the center of the afternoon.
 					</p>
 					<div className="mt-8">
 						<CTAButton to="/events" size="lg">
@@ -164,8 +165,10 @@ export function ModelPage() {
 				/>
 				<div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
 					{STUDENT_OUTCOMES.map((outcome) => (
-						<Card key={outcome.title} dark>
-							<IconPlaceholder label={outcome.icon} size="sm" className="mb-3" />
+						<Card key={outcome.title} dark className="flex flex-col items-center text-center">
+							<div className="mb-5 shrink-0">
+								<IconPlaceholder label={outcome.icon} size="lg" />
+							</div>
 							<h3 className="mb-1.5 font-bold text-white">{outcome.title}</h3>
 							<p className="text-sm leading-relaxed text-slate">{outcome.description}</p>
 						</Card>
@@ -201,7 +204,7 @@ export function ModelPage() {
 
 			<section className="bg-navy px-6 py-20">
 				<div className="mx-auto max-w-3xl text-center">
-					<h2 className="font-serif text-3xl font-bold text-white md:text-4xl">
+					<h2 className="font-display text-3xl font-extrabold uppercase text-white md:text-4xl">
 						See the model in action.
 					</h2>
 					<p className="mt-4 text-lg text-slate-light">

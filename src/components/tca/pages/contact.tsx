@@ -1,20 +1,16 @@
 import { type FormEvent, useState } from "react";
+import { Link } from "react-router-dom";
 
 import { CTAButton } from "@/components/tca/ui/cta-button";
 import { Section, SectionHeader } from "@/components/tca/ui/section";
 
 const GRADE_OPTIONS = [
-	"Pre-K",
-	"Kindergarten",
-	"1st Grade",
-	"2nd Grade",
-	"3rd Grade",
-	"4th Grade",
-	"5th Grade",
-	"6th Grade",
 	"7th Grade",
 	"8th Grade",
-	"9th Grade+",
+	"9th Grade",
+	"10th Grade",
+	"11th Grade",
+	"12th Grade",
 ] as const;
 
 const INSTRUMENT_OPTIONS = [
@@ -71,8 +67,8 @@ export function ContactPage() {
 		<>
 			<section className="bg-navy px-6 py-20 md:py-28">
 				<div className="mx-auto max-w-5xl text-center">
-					<p className="mb-4 text-sm font-semibold uppercase tracking-widest text-cyan">Contact</p>
-					<h1 className="font-serif text-4xl font-bold text-white md:text-5xl lg:text-6xl">
+					<p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-cyan">Contact</p>
+					<h1 className="font-display text-4xl font-extrabold uppercase text-white md:text-5xl lg:text-6xl">
 						Let's start a conversation.
 					</h1>
 					<p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-slate-light">
@@ -88,18 +84,21 @@ export function ContactPage() {
 					{submitted ? (
 						<div className="rounded-2xl border-2 border-cyan/30 bg-cyan/5 p-12 text-center">
 							<div className="mb-4 text-4xl">&#10003;</div>
-							<h2 className="font-serif text-2xl font-bold text-navy">
+							<h2 className="font-display text-2xl font-bold uppercase text-navy">
 								Thank you for your interest!
 							</h2>
 							<p className="mt-4 text-lg text-slate-dark">
 								Form submission is not yet connected to a backend. Please email us directly or check
 								back soon. In the meantime, explore our site to learn more about TCA.
 							</p>
-							<div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+							<div className="mt-8 flex flex-wrap justify-center gap-4">
 								<CTAButton to="/the-model">Explore the Model</CTAButton>
-								<CTAButton to="/faq" variant="outline">
+								<Link
+									to="/faq"
+									className="inline-flex items-center gap-2 rounded-full border-2 border-navy/30 px-7 py-3.5 text-sm font-bold text-navy transition-all duration-300 hover:bg-navy/5"
+								>
 									Read the FAQ
-								</CTAButton>
+								</Link>
 							</div>
 						</div>
 					) : (

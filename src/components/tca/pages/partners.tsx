@@ -36,10 +36,10 @@ export function PartnersPage() {
 		<>
 			<section className="bg-navy px-6 py-20 md:py-28">
 				<div className="mx-auto max-w-5xl text-center">
-					<p className="mb-4 text-sm font-semibold uppercase tracking-widest text-cyan">
+					<p className="mb-4 text-xs font-bold uppercase tracking-[0.2em] text-cyan">
 						Partnerships
 					</p>
-					<h1 className="font-serif text-4xl font-bold text-white md:text-5xl lg:text-6xl">
+					<h1 className="font-display text-4xl font-extrabold uppercase text-white md:text-5xl lg:text-6xl">
 						A school built to strengthen Austin's music ecosystem.
 					</h1>
 					<p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-slate-light">
@@ -63,7 +63,9 @@ export function PartnersPage() {
 						<Card key={partner.type}>
 							<div className="flex flex-col gap-6 sm:flex-row sm:items-start">
 								<div className="flex-1">
-									<h3 className="mb-2 text-lg font-bold text-navy">{partner.type}</h3>
+									<h3 className="mb-2 font-display text-lg font-bold uppercase text-navy">
+										{partner.type}
+									</h3>
 									<p className="text-sm leading-relaxed text-slate-dark">{partner.collaboration}</p>
 								</div>
 								<div className="shrink-0 rounded-lg bg-cyan/5 px-4 py-3 sm:max-w-64">
@@ -97,17 +99,16 @@ export function PartnersPage() {
 			</Section>
 
 			<Section>
-				<div className="flex aspect-video items-center justify-center rounded-2xl border border-slate-light/50 bg-muted">
-					<div className="text-center text-slate-dark">
-						<div className="mb-2 text-4xl">&#127932;</div>
-						<p className="text-sm">Partner ecosystem visual placeholder</p>
-					</div>
-				</div>
+				<img
+					src="/partner-ecosystem.png"
+					alt="TCA Partner Ecosystem showing connections to Private Teachers, Studios, Youth Orchestras, Churches & Venues, and Instrument Shops"
+					className="w-full rounded-2xl border border-slate-light/50 object-cover"
+				/>
 			</Section>
 
 			<section className="bg-navy px-6 py-20">
 				<div className="mx-auto max-w-3xl text-center">
-					<h2 className="font-serif text-3xl font-bold text-white md:text-4xl">
+					<h2 className="font-display text-3xl font-extrabold uppercase text-white md:text-4xl">
 						Let's explore a partnership.
 					</h2>
 					<p className="mt-4 text-lg text-slate-light">
