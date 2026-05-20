@@ -514,7 +514,7 @@ function EthicalReassurance() {
 const FAQ_PREVIEW = [
 	{
 		q: "Is TCA part of Alpha School?",
-		a: "TCA is planned as an Alpha School specialty academy for young musicians. Final public wording should match approved Alpha brand guidance.",
+		a: "TCA is planned as an Alpha School specialty academy for young musicians. Like Texas Sports Academy uses the Alpha model through the lens of sports, TCA uses it through the lens of music.",
 	},
 	{
 		q: "Is this only for advanced students?",

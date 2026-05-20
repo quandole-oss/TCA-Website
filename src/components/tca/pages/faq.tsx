@@ -9,7 +9,7 @@ const FAQ_ITEMS = [
 		questions: [
 			{
 				q: "Is TCA part of Alpha School?",
-				a: "TCA is planned as an Alpha School specialty academy for young musicians. Like Texas Sports Academy uses the Alpha model through the lens of sports, TCA uses it through the lens of music. Final public wording will match approved Alpha brand guidance.",
+				a: "TCA is planned as an Alpha School specialty academy for young musicians. Like Texas Sports Academy uses the Alpha model through the lens of sports, TCA uses it through the lens of music.",
 			},
 			{
 				q: "How is this different from Alpha Austin?",
@@ -120,11 +120,15 @@ function FAQAccordion({ question, answer }: { question: string; answer: string }
 			<button
 				type="button"
 				onClick={() => setOpen(!open)}
-				className="flex w-full items-start justify-between gap-4 py-5 text-left"
+				className="flex w-full cursor-pointer items-center justify-between gap-4 py-5 text-left hover:bg-slate-light/10 -mx-4 px-4 rounded-lg transition-colors"
 				aria-expanded={open}
 			>
 				<span className="font-semibold text-navy">{question}</span>
-				<span className="mt-1 shrink-0 text-slate-dark">{open ? "\u2212" : "+"}</span>
+				<span
+					className={`shrink-0 text-lg font-bold text-slate-dark transition-transform ${open ? "rotate-45" : ""}`}
+				>
+					+
+				</span>
 			</button>
 			{open && (
 				<div className="pb-5">
