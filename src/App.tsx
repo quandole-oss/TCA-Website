@@ -10,7 +10,10 @@ import { GuidesPage } from "@/components/tca/pages/guides";
 import { HomePage } from "@/components/tca/pages/home";
 import { ModelPage } from "@/components/tca/pages/model";
 import { MusicProgramPage } from "@/components/tca/pages/music-program";
+import { NotFoundPage } from "@/components/tca/pages/not-found";
 import { PartnersPage } from "@/components/tca/pages/partners";
+import { PrivacyPage } from "@/components/tca/pages/privacy";
+import { TermsPage } from "@/components/tca/pages/terms";
 
 export function App() {
 	return (
@@ -27,6 +30,9 @@ export function App() {
 					<Route path="faq" element={<FAQPage />} />
 					<Route path="about" element={<AboutPage />} />
 					<Route path="contact" element={<ContactPage />} />
+					<Route path="privacy" element={<PrivacyPage />} />
+					<Route path="terms" element={<TermsPage />} />
+					<Route path="*" element={<NotFoundPage />} />
 				</Route>
 			</Routes>
 		</BrowserRouter>
