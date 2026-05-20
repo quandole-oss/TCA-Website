@@ -26,7 +26,7 @@ const EVENTS = [
 		type: "In-Person",
 		description:
 			"A friendly assessment of theory, rhythm, ear, sight-reading, and practice habits. Every student receives feedback and a personalized practice plan — regardless of enrollment interest.",
-		audience: "Students (grades 4\u20138).",
+		audience: "Students (grades 7\u201312).",
 		value: "Get actionable feedback and a practice plan.",
 		dates: "By appointment",
 	},

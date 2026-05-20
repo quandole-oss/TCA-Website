@@ -104,7 +104,8 @@ export function AboutPage() {
 				<div className="mx-auto mt-10 max-w-xl text-center">
 					<div className="rounded-2xl border border-white/10 bg-white/5 p-8">
 						<p className="font-serif text-xl italic text-white">
-							"Texas Sports Academy is the sports lens. The Classical Academy is the music lens."
+							"Texas Sports Academy is the sports lens. The Classical Academy is the music lens.
+							Same playbook, different passion."
 						</p>
 					</div>
 				</div>

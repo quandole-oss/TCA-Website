@@ -57,7 +57,8 @@ export function AdmissionsPage() {
 					<p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-slate-light">
 						TCA is intentionally fit-first. We are looking for students who love music, respond to
 						coaching, can grow in independence, and would benefit from a school day organized around
-						both academic mastery and serious musical development.
+						both academic mastery and serious musical development on a conservatory and college prep
+						track.
 					</p>
 				</div>
 			</section>
@@ -120,7 +121,7 @@ export function AdmissionsPage() {
 						<ul className="space-y-3">
 							{[
 								"The student's musical interest is casual or exploratory",
-								"The family expects guaranteed competition outcomes or college placement",
+								"The family expects guaranteed competition wins or specific school admissions",
 								"The student is not ready for independent academic work",
 								"The family prefers a traditional full-day school schedule",
 								"The student is not open to group learning and peer feedback",

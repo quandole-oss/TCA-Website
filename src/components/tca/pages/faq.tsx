@@ -34,7 +34,7 @@ const FAQ_ITEMS = [
 			},
 			{
 				q: "What grades will launch first?",
-				a: "We recommend grades 4\u20138 or 5\u20138 for pilot clarity, with expansion based on demand and staffing.",
+				a: "TCA serves grades 7\u201312 \u2014 students on a conservatory and college prep track.",
 			},
 			{
 				q: "What instruments are supported?",
@@ -68,7 +68,7 @@ const FAQ_ITEMS = [
 			},
 			{
 				q: "Will TCA guarantee auditions, competitions, or scholarships?",
-				a: "No. TCA can provide process quality, coaching, accountability, and preparation, but outcomes depend on many factors. We are honest about what we can and cannot promise.",
+				a: "TCA is built to prepare students for conservatory auditions, college music programs, and competitions — but we cannot guarantee specific outcomes. We provide world-class process, coaching, and accountability. Results depend on many factors including the student's own commitment.",
 			},
 			{
 				q: "What does 'guided practice' mean?",

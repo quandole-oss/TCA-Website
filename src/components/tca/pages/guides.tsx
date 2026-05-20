@@ -98,10 +98,9 @@ export function GuidesPage() {
 				<div className="mx-auto max-w-3xl text-center">
 					<SectionHeader eyebrow="Who We're Looking For" title="The TCA guide profile." centered />
 					<p className="text-lg leading-relaxed text-slate-dark">
-						We are looking for musician-educators who combine professional artistry with a gift for
-						teaching young people. You do not need traditional school teaching experience — but you
-						do need patience, structure, warmth, and a genuine love for helping students grow as
-						both musicians and people.
+						We hire for performance-track credentials first. If you're a working musician who loves
+						teaching, that matters more than a teaching certificate. You need patience, structure,
+						warmth, and a genuine love for helping students grow as both musicians and people.
 					</p>
 				</div>
 			</Section>

@@ -33,7 +33,7 @@ function Hero() {
 				</h1>
 				<p className="mt-8 max-w-2xl text-lg leading-relaxed text-slate-light animate-fade-up-delay">
 					Accelerated academics in the morning. Conservatory-level music training all afternoon. A
-					new model for serious young musicians.
+					new model for serious young musicians on a conservatory and college prep track.
 				</p>
 
 				<div className="mt-10 flex flex-wrap items-center gap-4 animate-fade-up-delay">
@@ -245,7 +245,7 @@ function SplitFeatures() {
 					<ul className="mt-4 space-y-1.5">
 						{[
 							"4 full hours for music and life skills",
-							"Expert coaching, grades 4 through 8",
+							"Expert coaching, grades 7 through 12",
 							"Built to develop the next generation of musicians",
 						].map((item) => (
 							<li key={item} className="flex items-center gap-2 text-sm text-cyan">
@@ -526,7 +526,7 @@ const FAQ_PREVIEW = [
 	},
 	{
 		q: "What grades will launch first?",
-		a: "We recommend grades 4\u20138 or 5\u20138 for pilot clarity, with expansion based on demand and staffing.",
+		a: "TCA serves grades 7\u201312 \u2014 students on a conservatory and college prep track.",
 	},
 ] as const;
 

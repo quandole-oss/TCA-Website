@@ -68,7 +68,7 @@ export function MusicProgramPage() {
 						Music Program
 					</p>
 					<h1 className="font-display text-4xl font-extrabold uppercase text-white md:text-5xl lg:text-6xl">
-						Daily conservatory training for young musicians.
+						Daily conservatory training. College prep results.
 					</h1>
 					<p className="mx-auto mt-6 max-w-3xl text-lg leading-relaxed text-slate-light">
 						Weekly lessons can inspire a student, but daily structure changes a student. TCA
